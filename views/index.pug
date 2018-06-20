@@ -1,6 +1,9 @@
 extends layout
 
 block content
+
+  h4=data.length+' Entries'
+
   .limiter
   .container-table100
     .wrap-table100
@@ -11,7 +14,7 @@ block content
               tr.row100.head
                 th.cell100.column1 Alert Name
                 th.cell100.column2 Title
-                th.cell100.column3 Published
+                //th.cell100.column3 Published
                 th.cell100.column4 Updated
                 th.cell100.column5 Link
         .table100-body.js-pscroll
@@ -21,8 +24,8 @@ block content
                 tr.row100.body
                   td.cell100.column1=val.alert_name
                   td.cell100.column2!=val.title
-                  td.cell100.column3=val.published
-                  td.cell100.column4=val.updated
+                  //td.cell100.column3=moment(val.published).format('MMMM Do YYYY, h:mm a')
+                  td.cell100.column4=moment(val.updated).format('MMMM Do YYYY, h:mm a')
                   td.cell100.column5
                     a(href=val.link) Link
 
