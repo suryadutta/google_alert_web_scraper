@@ -1,0 +1,8 @@
+# Local Config Files
+*.env
+
+#Temporary Files for Testing
+tmp/
+
+# Dependency directories
+node_modules/

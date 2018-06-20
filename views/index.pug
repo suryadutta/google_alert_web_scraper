@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .limiter
+  .container-table100
+    .wrap-table100
+      .table100.ver1.m-b-110
+        .table100-head
+          table
+            thead
+              tr.row100.head
+                th.cell100.column1 Alert Name
+                th.cell100.column2 Title
+                th.cell100.column3 Published
+                th.cell100.column4 Updated
+                th.cell100.column5 Link
+        .table100-body.js-pscroll
+          table
+            tbody
+              each val in data
+                tr.row100.body
+                  td.cell100.column1=val.alert_name
+                  td.cell100.column2!=val.title
+                  td.cell100.column3=val.published
+                  td.cell100.column4=val.updated
+                  td.cell100.column5
+                    a(href=val.link) Link
+
